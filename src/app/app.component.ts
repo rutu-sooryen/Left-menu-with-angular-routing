@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'left-menu-demo';
+  isExpanded = true;
+  showSubMenu: boolean = false;
+  isShowing = false;
+  showNestedMenu: boolean = false;
+
+  
 }

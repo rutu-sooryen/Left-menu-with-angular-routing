@@ -17,14 +17,14 @@
       <div class="subMenu" [ngClass]="{'expanded' : showSubMenu}" *ngIf="isShowing || isExpanded">
         <div class="menu-list"  routerLink="/sub-menu-item1" routerLinkActive="active">SubMenu item 1</div>
         <div class="menu-list" routerLink="/sub-menu-item2" routerLinkActive="active">SubMenu item 2</div>
-        <div class="menu-list" (click)="showNestedMenu = !showNestedMenu">
+        <div class="menu-list nested-menu-title" (click)="showNestedMenu = !showNestedMenu">
           <span class="nested-menu" *ngIf="isExpanded || isShowing">Nested Menu</span>
           <img class="icon menu-button" [ngClass]="{'rotated' : showNestedMenu}" *ngIf="isExpanded || isShowing"
             src="../assets/image/down_arrow.svg">
         </div>
         <div class="subMenu" [ngClass]="{'expanded' : showNestedMenu}" *ngIf="isShowing || isExpanded">
-          <div class="menu-list" routerLink="/nested-menu-item1" routerLinkActive="active">Nested Menu item 1</div>
-          <div class="menu-list" routerLink="/nested-menu-item2" routerLinkActive="active">Nested Menu item 2</div>
+          <div class="nested-menu-list" routerLink="/nested-menu-item1" routerLinkActive="active">Nested Menu item 1</div>
+          <div class="nested-menu-list" routerLink="/nested-menu-item2" routerLinkActive="active">Nested Menu item 2</div>
         </div>
       </div>
     </div>

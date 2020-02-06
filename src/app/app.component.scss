@@ -85,18 +85,22 @@ svg#clouds {
     width: 30%;
     margin-top: 20px;
   }
-  .menu-list {
+  .menu-list,
+  .nested-menu-list {
     min-height: 30px;
     padding: 10px;
     display: flex;
     align-items: center;
   }
-  .side-nav .menu-list:hover {
+  .side-nav .nested-menu-list:hover,
+  .menu-list:hover {
     background-color: #ddd;
   }
-  .menu-list.active {
+  .menu-list.active,
+  .nested-menu-list.active {
     background-color: #ccc;
   }
+
   .main-nav {
     margin-top: 20px;
     background: white;

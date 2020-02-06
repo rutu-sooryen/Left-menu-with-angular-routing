@@ -15,16 +15,16 @@
           src="../assets/image/down_arrow.svg">
       </div>
       <div class="subMenu" [ngClass]="{'expanded' : showSubMenu}" *ngIf="isShowing || isExpanded">
-        <div class="menu-list">SubMenu item 1</div>
-        <div class="menu-list">SubMenu item 2</div>
+        <div class="menu-list"  routerLink="/sub-menu-item1" routerLinkActive="active">SubMenu item 1</div>
+        <div class="menu-list" routerLink="/sub-menu-item2" routerLinkActive="active">SubMenu item 2</div>
         <div class="menu-list" (click)="showNestedMenu = !showNestedMenu">
           <span class="nested-menu" *ngIf="isExpanded || isShowing">Nested Menu</span>
           <img class="icon menu-button" [ngClass]="{'rotated' : showNestedMenu}" *ngIf="isExpanded || isShowing"
             src="../assets/image/down_arrow.svg">
         </div>
         <div class="subMenu" [ngClass]="{'expanded' : showNestedMenu}" *ngIf="isShowing || isExpanded">
-          <div class="menu-list">Nested Menu item 1</div>
-          <div class="menu-list">Nested Menu item 2</div>
+          <div class="menu-list" routerLink="/nested-menu-item1" routerLinkActive="active">Nested Menu item 1</div>
+          <div class="menu-list" routerLink="/nested-menu-item2" routerLinkActive="active">Nested Menu item 2</div>
         </div>
       </div>
     </div>
@@ -32,7 +32,8 @@
       <div class="main-list">
         <h3>
           You Are In Main Div..
-        </h3>
+        </h3> 
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>
@@ -44,5 +45,3 @@
       transform="translate(142.69 -634.312)" fill="#eee" />
   </svg>
 </div>
-
-<router-outlet></router-outlet>
